@@ -8,11 +8,16 @@ const db = pgp('postgres://localhost/shopped')
 
 
 app.get('/', (req, res) => {
+  db.one()
   res.send('Hello World!')
 });
 
 app.post('/', (req, res) => {
-    db.none('INSERT INTO users (userName,name,email) VALUES (vanny,van,van@pursuit.org)')
+    db.none('INSERT INTO users (userName,name,email) VALUES ($[userName], $[name], $[email])', {
+      userName: 'vanny',
+      name: 'van',
+      email: 'van@pursuit.org'
+    })
   res.send('Got a POST request')
 });
 

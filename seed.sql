@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS shopped;
-CREATE DATABASE shopped;
+DROP DATABASE IF EXISTS patchthat;
+CREATE DATABASE patchthat;
 
 \c shopped;
 
