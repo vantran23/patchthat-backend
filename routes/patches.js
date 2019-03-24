@@ -3,7 +3,7 @@ let router = express.Router();
 
 
 router.get('/', (req, res) => {
-  res.send('Sending list of all products!')
+  res.send('Sending list of all items!')
 });
 
 
